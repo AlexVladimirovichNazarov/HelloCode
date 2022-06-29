@@ -24,7 +24,32 @@ while (position < count)
     }
 }
 
+int indexOf(int[] collection, int find)
+{
+    int count = collection.Length;
+    int index = 0;
+    int position = -1;
+
+    while(index < count)
+    {
+        if(collection[index] == find)
+        {
+            position = index;
+            break;
+        }
+        index++;
+
+    }
+    return position;
+}
+
 int[] array = new int[10]; //Определили длинну массива
 
 FillArray(array); //Заполнили массив
 PrintArray(array); //Распечатали массив
+
+Console.WriteLine();
+
+int pos = indexOf(array, 4); // Поиск позиции со значением 4 (Нахождение позиции массива с нужным нам элементом)
+
+Console.WriteLine(pos);
